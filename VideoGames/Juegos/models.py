@@ -3,8 +3,10 @@ from django.db import models
 
 # Create your models here.
 class creator(model.Model):
+	name = models.CharField(max_lenght=50,help_text='Escriba el nombre del autor')
+	email = models.EmailField(help_text='Escriba el correo de contacto del autor')
 
-class Juego(models.Model):
+class game(models.Model):
     """
     almacena los juegos mediante el equipo de
     administracion
@@ -20,4 +22,4 @@ class Juego(models.Model):
 
 class review(models.Model):
     review=models.IntegerField(max_lenght=1,help_text='Opiniones ')
-	game=models.ForeignKey(Juego,help_text='Selecione el juego que desea hacer la sinopsis')
+	game=models.ForeignKey(game,help_text='Selecione el juego que desea hacer la sinopsis')
