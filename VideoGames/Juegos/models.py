@@ -10,8 +10,7 @@ class creator(models.Model):
 	birthday=models.DateField(help_text='Fecha de nacimiento')
 	genere=models.Charfield(max_lenght=1, help_text='Coloque el sexo del creador' choices=generes)
 
-class company(models.Model):
-	name=models.Charfield(max_lenght=30,help_text='Compañia Desarrolladora')
+
 
 	
 class games(models.Model):
@@ -26,6 +25,7 @@ class games(models.Model):
 	clasification=models.DecimalField(max_lenght=5, help_text='Clasificacion del videojuego ')
 	genere=models.CharField(max_lenght=50, help_text='Genero del videojuego ')
 	console=models.CharField(max_lenght=50, help_text='Plataforma de videojuego ')
+	name=models.Charfield(max_lenght=30,help_text='Compañia Desarrolladora')
 
 
 class review(models.Model):
